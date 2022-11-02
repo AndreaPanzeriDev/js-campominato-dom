@@ -90,7 +90,7 @@ main{
 }
 
 /*************************
-         ACTIVE
+      ACTIVE & BOMB
 ***********************+*/
 
 .active{
@@ -99,4 +99,15 @@ main{
 
 .bomb{
     background-color: rgb(236, 65, 65);
+}
+
+
+/*************************
+         FOOTER
+***********************+*/
+
+footer{
+    height: 10vh;
+    text-align: center;
+    margin-top: 2rem;
 }

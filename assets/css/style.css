@@ -16,15 +16,18 @@ body{
 ***********************+*/
 
 .navbar,
-main{
-    display: flex;
+.pingu
+{
     width: 80%;
     margin: auto;
 }
 
 .navbar{
     height: 10vh;
+    display: flex;
 }
+
+
 
 /*************************
          BUTTON
@@ -46,8 +49,8 @@ button:hover{
          GRID
 ***********************+*/
 
-main{
-    height: 70vh;
+.pingu{
+    height: auto;
     width: 70vh;
 }
 
@@ -99,6 +102,16 @@ main{
 
 .bomb{
     background-color: rgb(236, 65, 65);
+}
+
+
+/*************************
+         MAIN
+***********************+*/
+
+main{
+    background-color: rgb(190, 247, 228);
+    height: auto;
 }
 
 

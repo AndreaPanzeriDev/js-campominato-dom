@@ -1,3 +1,8 @@
+//global var
+let Bomb = [];
+
+
+
 
 function Play(){
     let table = document.getElementById("grid");
@@ -23,6 +28,8 @@ function Play(){
 function createTable(n_square, style){
     //make a node/connection with the grid
     const table = document.getElementById("grid");
+    //create an array with the bomb
+    createArray(n_square);
     //creation square by square
     for(let i = 1; i<=n_square; i++){
         //function that create a single square
@@ -44,4 +51,16 @@ function singleSquare(style, count){
     div.classList.add(style);
     div.innerHTML = count;
     return div;
+}
+
+
+function createArray(n){
+    for(let i = 0; i < 16; i++){
+        let randomBomb = Math.round(Math.random() * n);
+        if(Bomb.includes(randomBomb)){
+            i--;
+        }else{
+            Bomb.push(randomBomb);
+        }
+    }
 }

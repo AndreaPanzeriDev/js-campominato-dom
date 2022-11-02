@@ -34,10 +34,11 @@ button{
     border: none;
     padding: 5px 25px 5px 25px;
     border-radius: 5px;
+    background-color: gold;
 }
 
 button:hover{
-    background-color: lightgray;
+    background-color: rgb(182, 158, 18);
 }
 
 
@@ -46,8 +47,8 @@ button:hover{
 ***********************+*/
 
 main{
-    height: calc(90vh);
-    width: calc(90vh)
+    height: 70vh;
+    width: 70vh;
 }
 
 #grid{
@@ -93,5 +94,5 @@ main{
 ***********************+*/
 
 .active{
-    background-color: red;
+    background-color: lightblue;
 }

@@ -1,11 +1,13 @@
 //global var
+//array
 let Bomb = [];
 
-
-
+let score = 0;
 
 function Play(){
+    //reload
     Bomb = [];
+    score = 0;
     let table = document.getElementById("grid");
     table.innerHTML = '';
     //take the option from the html
@@ -41,15 +43,22 @@ function createTable(n_square, style){
             console.log(this);
            if(Bomb.includes(parseInt(this.innerHTML))){
             this.classList.toggle('bomb');
-            this.innerHTML = "boom"
+            this.innerHTML = "boom";
+            alert("Hai perso!!! il tuo punteggio è: " + score);
+            location.reload();
            }else{
             this.classList.add('active');
+            score ++;
+            document.getElementById("points").innerHTML = `il punteggio è ${score}`
+            
            }
         })
         table.append(instant_square);
     }
-
 }
+
+
+
 
 
 function singleSquare(style, count){

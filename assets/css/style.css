@@ -96,3 +96,7 @@ main{
 .active{
     background-color: lightblue;
 }
+
+.bomb{
+    background-color: rgb(236, 65, 65);
+}

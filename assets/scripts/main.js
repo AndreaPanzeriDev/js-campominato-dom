@@ -7,7 +7,7 @@ let Bomb = [];
 function Play(){
     let table = document.getElementById("grid");
     table.innerHTML = '';
-    //take the option from 
+    //take the option from the html
     let option = document.getElementById("selection").value;
     console.log(option);
     switch(option){
@@ -28,7 +28,7 @@ function Play(){
 function createTable(n_square, style){
     //make a node/connection with the grid
     const table = document.getElementById("grid");
-    //create an array with the bomb
+    //create an array with the bomb in random position
     createArray(n_square);
     //creation square by square
     for(let i = 1; i<=n_square; i++){
@@ -38,7 +38,12 @@ function createTable(n_square, style){
         //select item
         instant_square.addEventListener("click", function(){
             console.log(this);
+            //this.classList.toggle('active');
+           if(parseInt(this.innerHTML) == Bomb[i]){
+            this.classList.toggle('bomb');
+           }else{
             this.classList.toggle('active');
+           }
         })
         table.append(instant_square);
     }
@@ -63,4 +68,5 @@ function createArray(n){
             Bomb.push(randomBomb);
         }
     }
+    console.log(Bomb);
 }

@@ -5,6 +5,7 @@ let Bomb = [];
 
 
 function Play(){
+    Bomb = [];
     let table = document.getElementById("grid");
     table.innerHTML = '';
     //take the option from the html
@@ -38,11 +39,11 @@ function createTable(n_square, style){
         //select item
         instant_square.addEventListener("click", function(){
             console.log(this);
-            //this.classList.toggle('active');
-           if(parseInt(this.innerHTML) == Bomb[i]){
+           if(Bomb.includes(parseInt(this.innerHTML))){
             this.classList.toggle('bomb');
+            this.innerHTML = "boom"
            }else{
-            this.classList.toggle('active');
+            this.classList.add('active');
            }
         })
         table.append(instant_square);
@@ -61,7 +62,7 @@ function singleSquare(style, count){
 
 function createArray(n){
     for(let i = 0; i < 16; i++){
-        let randomBomb = Math.round(Math.random() * n);
+        let randomBomb = Math.round(Math.random() * (n + 1));
         if(Bomb.includes(randomBomb)){
             i--;
         }else{

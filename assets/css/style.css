@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*************************
+         NAVBAR
+***********************+*/
+
+.navbar,
+main{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.navbar{
+    height: 10vh;
+}
+
+/*************************
+         BUTTON
+***********************+*/
+
+button{
+    border: none;
+    padding: 5px 25px 5px 25px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+
+/*************************
+         GRID
+***********************+*/
+
+main{
+    height: calc(90vh);
+    width: calc(90vh)
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center ;
+}
+
+
+/*************************
+         SQUARE
+***********************+*/
+
+.sq10,
+.sq9,
+.sq7
+{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sq10{
+    width: calc( 100% / 10 );
+    aspect-ratio: 1/1;
+}
+
+.sq9{
+    width: calc( 100% / 9 );
+    aspect-ratio: 1/1;
+}
+
+.sq7{
+    width: calc( 100% / 7 );
+    aspect-ratio: 1/1;
+}
+
+/*************************
+         ACTIVE
+***********************+*/
+
+.active{
+    background-color: red;
+}
